@@ -1,6 +1,5 @@
 #include(${CMAKE_CURRENT_SOURCE_DIR}/../CMakeLists.txt)
 
-#if(${ROS_VERSION} STREQUAL "2")
 
 cmake_minimum_required(VERSION 3.5)
 project(structure_core_ros2_driver)
@@ -122,10 +121,10 @@ install(
 )
 
 
-#install(TARGETS driver 
+#install(TARGETS driver
 #    RUNTIME DESTINATION lib/${PROJECT_NAME})
 
-install(TARGETS sc_wrapper_node 
+install(TARGETS sc_wrapper_node
     RUNTIME DESTINATION lib/${PROJECT_NAME})
 
 install(
@@ -141,5 +140,3 @@ install(
     DESTINATION share/${PROJECT_NAME})
 
 ament_package()
-
-#endif()
